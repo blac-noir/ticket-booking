@@ -1,0 +1,87 @@
+.profile-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.user-info,
+.booking-history {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.booking-history h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.bookings-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.booking-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+.booking-details h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.booking-details p {
+    color: #666;
+    margin: 0.25rem 0;
+}
+
+.booking-status {
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-weight: bold;
+}
+
+.status-active {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.status-cancelled {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-cancel {
+    padding: 0.5rem 1rem;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition-speed);
+}
+
+.btn-cancel:hover {
+    background-color: #c0392b;
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-card {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+} 
