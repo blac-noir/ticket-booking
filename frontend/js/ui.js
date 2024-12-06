@@ -52,23 +52,7 @@ class UI {
 }
 
 // Event Listeners
-document.addEventListener('DOMContentLoaded', () => {
-    const loginBtn = document.getElementById('loginBtn');
-    const loginModal = document.getElementById('loginModal');
-    const closeModal = document.querySelector('.close');
-
-    loginBtn?.addEventListener('click', () => {
-        loginModal.classList.remove('hidden');
-    });
-
-    closeModal?.addEventListener('click', () => {
-        loginModal.classList.add('hidden');
-    });
-
-    // Close modal when clicking outside
-    window.addEventListener('click', (e) => {
-        if (e.target === loginModal) {
-            loginModal.classList.add('hidden');
-        }
-    });
-}); 
+const loginbtn = document.getElementById('loginBtn');
+loginbtn.addEventListener('click', () => {
+  location.assign('./pages/login.html')
+});

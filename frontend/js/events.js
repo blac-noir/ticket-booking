@@ -125,6 +125,16 @@ class EventsManager {
             UI.hideLoading(form.querySelector('button'));
         }
     }
+
+    showLoading() {
+        const spinner = document.getElementById('loadingSpinner');
+        spinner.classList.remove('hidden');
+    }
+
+    hideLoading() {
+        const spinner = document.getElementById('loadingSpinner');
+        spinner.classList.add('hidden');
+    }
 }
 
 // Initialize events manager when DOM is loaded

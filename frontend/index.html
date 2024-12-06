@@ -6,6 +6,12 @@
     <title>Event Ticket Booking</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/components.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="main-header">
@@ -17,13 +23,13 @@
                 <a href="index.html" class="active">Home</a>
                 <a href="pages/events.html">Events</a>
                 <a href="pages/profile.html" class="auth-required hidden">My Profile</a>
-                <a href="pages/register.html" class="auth-hide">Register</a>
-                <button id="loginBtn" class="btn-login auth-hide">Login</button>
-                <button id="logoutBtn" class="btn-logout auth-required hidden">Logout</button>
+                <button id="loginBtn" class="btn-login btn-outline auth-hide">Login</button>
+                <button id="logoutBtn" class="btn-logout btn-outline auth-required hidden">Logout</button>
             </div>
         </nav>
     </header>
 
+    
     <main>
         <section class="hero">
             <h2>Book Your Next Event</h2>
@@ -31,24 +37,6 @@
             <a href="pages/events.html" class="cta-button">Browse Events</a>
         </section>
 
-        <!-- Login Modal -->
-        <div id="loginModal" class="modal hidden">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Login</h2>
-                <form id="loginForm" class="form">
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" required>
-                    </div>
-                    <button type="submit" class="btn-primary">Login</button>
-                </form>
-            </div>
-        </div>
     </main>
 
     <footer>

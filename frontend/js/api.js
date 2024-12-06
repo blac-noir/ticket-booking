@@ -47,17 +47,10 @@ class API {
     }
 
     static async register(userData) {
-        const response = await this.request('/auth/register', {
+        return await this.request('/auth/register', {
             method: 'POST',
             body: JSON.stringify(userData)
         });
-
-        if (response.token) {
-            localStorage.setItem(this.TOKEN_KEY, response.token);
-            localStorage.setItem('user', JSON.stringify(response.user));
-        }
-
-        return response;
     }
 
     static async getUserProfile() {
@@ -80,15 +73,15 @@ class API {
     }
 
     static async bookTicket(eventId, seatNumber) {
-        return await this.request('/tickets/book', {
+        return await this.request('/bookings', {
             method: 'POST',
             body: JSON.stringify({ eventId, seatNumber })
         });
     }
 
     static async cancelTicket(ticketId) {
-        return await this.request(`/tickets/${ticketId}/cancel`, {
-            method: 'POST'
+        return await this.request(`/bookings/${ticketId}`, {
+            method: 'DELETE'
         });
     }
 
